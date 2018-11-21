@@ -26,7 +26,7 @@ class Launches extends React.Component {
                         { loading, error, data }) => {
                             if(loading) return <p>loading</p>
                             if(error) console.log(error);
-                            console.log(data);
+                
                             return <Fragment>
                                 {
                                     data.launches.map(launch => (
