@@ -2,7 +2,12 @@ const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const schema = require("./schema.js");
 
+const cors = require('cors');
+
+// Allow cross-origin
+
 const app = express();
+app.use(cors())
 
 app.use("/graphql", graphqlHTTP({
     schema,
